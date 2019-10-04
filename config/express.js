@@ -37,7 +37,7 @@ app.use(((err, req, res, next) => {
 
 // catch 404 and forward
 app.use((req, res, next) => {
-  next(new AppError('Not Found', 404));
+  next(new AppError('General 404 Error, Not Found', 404));
 });
 
 // error handler
