@@ -10,11 +10,13 @@ const ENDPOINT = '/register';
 describe(`POST ${ENDPOINT}`, () => {
 	it('should create a new user', (done) => {
 		const email = 'example@gmail.com';
+		const username = 'example1';
 		const password = '123456';
 		request(app)
 			.post(ENDPOINT)
 			.send({
 				email,
+				username,
 				password,
 			})
 			.expect(200)
